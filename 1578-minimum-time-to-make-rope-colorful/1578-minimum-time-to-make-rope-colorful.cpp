@@ -5,7 +5,7 @@ public:
     {
         int res = 0;
 
-        for (int i = 1; i < colors.length(); ++i)
+        for (int i = 1; i < colors.size(); i++)
         {
             if (colors[i] == colors[i - 1])
             {
