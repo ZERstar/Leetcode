@@ -24,7 +24,7 @@
 <strong>Explanation:</strong> 14 is not ugly since it includes the prime factor 7.
 </pre>
 
-<p>&nbsp;</p>
+<p>&nbsp;</p>.......
 <p><strong>Constraints:</strong></p>
 
 <ul>
