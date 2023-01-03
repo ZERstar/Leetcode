@@ -5,7 +5,7 @@ class Solution {
     int ans = 0;
 
     for (int j = 0; j < n; ++j)
-      for (int i = 0; i + 1 < A.size(); ++i)
+      for (int i = 0; i + 1 < A.size(); i++)
         if (A[i][j] > A[i + 1][j]) {
           ans++;
           break;
