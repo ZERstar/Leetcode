@@ -10,7 +10,7 @@ public:
             for(int j = i+1;j<n-1 && nums[i]!=0;j++){
                 while(k < n && nums[i]+nums[j] > nums[k])
                     k++;
-                cnt += k - 1 -j;
+                cnt += k - j - 1;
             }
         }
         return cnt;
