@@ -20,7 +20,7 @@ public:
         }
         
         for(int i=1;i<n-1;i++){
-            water += max(min(left[i],right[i]) - arr[i], 0); 
+            water += min(left[i],right[i]) - arr[i]; 
         }
         return water;
     }
