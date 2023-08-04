@@ -11,15 +11,13 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode* C = head;
-        ListNode* P = NULL;
-        ListNode* N;
-        while(C != NULL){
-            N = C->next;
-            C->next = P;
-            P = C;
-            C = N;
+        if(head==NULL or head->next==NULL){
+            return head;
         }
-        return head = P;
+        ListNode* shead = reverseList(head->next);
+        ListNode* temp = head->next;
+        temp->next = head;
+        head->next = NULL;
+        return shead;
     }
 };
