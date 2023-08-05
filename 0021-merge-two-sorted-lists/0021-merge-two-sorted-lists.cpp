@@ -10,20 +10,18 @@
  */
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if(l1==NULL){
-                return l2;
-            }
-        if(l2==NULL){
-            return l1;
-        }
-        if(l1->val<=l2->val){
-            l1->next = mergeTwoLists(l1->next,l2);
-            return l1;
+    ListNode* mergeTwoLists(ListNode* a, ListNode* b) {
+        if(a == NULL) return b;
+        if(b == NULL) return a;
+        ListNode* c;
+        if(a->val < b->val){
+            c=a;
+            c->next = mergeTwoLists(a->next, b);
         }
         else{
-            l2->next = mergeTwoLists(l2->next,l1);
-            return l2;
+            c=b;
+            c->next = mergeTwoLists(a, b->next);
         }
+        return c;
     }
 };
