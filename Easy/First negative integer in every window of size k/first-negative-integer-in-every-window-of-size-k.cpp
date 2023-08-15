@@ -28,20 +28,23 @@ int main() {
 
 // } Driver Code Ends
 
-
+typedef long long ll;
 vector<long long> printFirstNegativeInteger(long long int arr[], long long int N, long long int k) {
-    vector<long long> ans;
-    queue<long long> q;
-    int i = 0, j = 0;
+    int i=0, j = 0;
+    vector<ll> ans;
+    deque<ll> dq;
     while (j < N) {
         if (arr[j] < 0) {
-            q.push(arr[j]);
+            dq.push_back(arr[j]);
         }
-        if (j - i + 1 >= k) {
-            if (q.empty()) ans.push_back(0);
-            else {
-                ans.push_back(q.front());
-                if (arr[i] == q.front()) q.pop();
+        if (j - i + 1 == k) {
+            if (!dq.empty()) {
+                ans.push_back(dq.front());
+            } else {
+                ans.push_back(0);
+            }
+            if (arr[i] < 0 && !dq.empty()) {
+                dq.pop_front();
             }
             i++;
         }
@@ -49,3 +52,28 @@ vector<long long> printFirstNegativeInteger(long long int arr[], long long int N
     }
     return ans;
 }
+
+// typedef long long ll;
+// vector<long long> printFirstNegativeInteger(long long int arr[], long long int N, long long int k) {
+//     int i = 0, j = 0;
+//     vector<ll> ans;
+//     deque<ll> dq;
+//     while (j < N) {
+//         if (arr[j] < 0) {
+//             dq.push_back(arr[j]);
+//         }
+//         if (j - i + 1 == k) {  // Corrected the condition
+//             if (!dq.empty()) {
+//                 ans.push_back(dq.front());
+//             } else {
+//                 ans.push_back(0);
+//             }
+//             if (arr[i] < 0 && !dq.empty()) {  // Check if arr[i] is in dq
+//                 dq.pop_front();
+//             }
+//             i++;
+//         }
+//         j++;  // Increment j at the beginning of the loop
+//     }
+//     return ans;
+// }
