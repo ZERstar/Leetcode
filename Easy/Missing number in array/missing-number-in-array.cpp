@@ -10,19 +10,18 @@ using namespace std;
 // } Driver Code Ends
 // User function template for C++
 
+// User function template for C++
+
 class Solution{
   public:
     int missingNumber(vector<int>& array, int n) {
         // Your code goes here
-        unordered_set<int> freq(array.begin(), array.end());
-        int miss = 0;
-        for(int i=1;i<=array.size()+1;i++){
-            if(freq.find(i) == freq.end()){
-                miss = i;
-                break;
-            }
-        }
-        return miss;
+        // i
+        int res =0;
+        for(int i=1; i<=n; i++) res^=i;
+        for(int i=0; i<n-1;i++) res^=array[i];
+        return res;
+            
     }
 };
 
