@@ -10,15 +10,16 @@
  * };
  */
 class Solution {
- public:
-  TreeNode* invertTree(TreeNode* root) {
-    if (root == nullptr)
-      return nullptr;
-
-    TreeNode* const left = root->left;
-    TreeNode* const right = root->right;
-    root->left = invertTree(right);
-    root->right = invertTree(left);
-    return root;
-  }
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if(root==NULL) return NULL;
+        invertTree(root->left);
+        invertTree(root->right);
+        
+        TreeNode *temp = root->left;
+        root->left = root->right;
+        root->right = temp;
+        
+        return root;
+    }
 };
