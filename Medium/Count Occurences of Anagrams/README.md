@@ -1,4 +1,4 @@
-<h2><a href="https://practice.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1">Count Occurences of Anagrams</a></h2><h3>Difficulty Level : Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a word <strong>pat</strong>&nbsp;and a text <strong>txt</strong>. Return the count of the occurrences of anagrams of the word in the text.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1">Count Occurences of Anagrams</a></h2><h3>Difficulty Level : Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a word <strong>pat</strong>&nbsp;and a text <strong>txt</strong>. Return the count of the occurrences of anagrams of the word in the text.</span></p>
 <p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input:
 </strong>txt = forxxorfxdofr
