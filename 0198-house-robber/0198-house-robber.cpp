@@ -1,6 +1,8 @@
 class Solution {
 public:
-    int t[101];
+    //int t[101];
+    int n;
+    vector<int>t;
     int solve(vector<int>&nums, int i, int n){
         if(i>=n) return 0;
         
@@ -15,8 +17,9 @@ public:
     }
     
     int rob(vector<int>& nums) {
-        int n = nums.size();
-        memset(t,-1,sizeof(t));
+        n = nums.size();
+        //memset(t,-1,sizeof(t));
+        t.assign(n,-1);
         return solve(nums, 0, n);
     }
 };
