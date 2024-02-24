@@ -19,7 +19,7 @@ public:
     int rob(vector<int>& nums) {
         n = nums.size();
         //memset(t,-1,sizeof(t));
-        t.assign(n,-1);
+        t.assign(101,-1);
         return solve(nums, 0, n);
     }
 };
