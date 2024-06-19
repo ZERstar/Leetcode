@@ -14,7 +14,7 @@ public:
                         con=0;
                     }
                 }
-                else con=0;
+                else con = 0;
             }
             if(bou>=m){
                 ans = mid;
