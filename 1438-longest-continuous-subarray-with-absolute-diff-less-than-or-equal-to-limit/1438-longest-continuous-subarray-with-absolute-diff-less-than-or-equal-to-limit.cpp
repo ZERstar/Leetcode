@@ -7,7 +7,7 @@ public:
         int maxLen = 0;
         while(j<n){
             st.insert(nums[j]);
-            if(*st.rbegin()-*st.begin() > limit){
+            while(*st.rbegin()-*st.begin() > limit){
                 st.erase(st.find(nums[i]));
                 i++;
             }
